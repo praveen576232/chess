@@ -1,0 +1,11 @@
+.promotion{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.promotion_piecs{
+    height: 50%;
+    width: 50%;
+    cursor: pointer;
+}

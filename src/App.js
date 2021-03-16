@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import Chess  from 'chess.js';
+import React, { useEffect, useState } from 'react';
+
 import './App.css';
 
+import { init } from './chess/chess';
+import Board from './Game/Chess/board/Board';
+
 function App() {
+  const [board,setboard]=useState([]);
+  useEffect(() => {
+  const board = init();
+ 
+   setboard(board)
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+   <div className="app_board">
+
+     <Board/>
+   </div>
+     
     </div>
   );
 }
